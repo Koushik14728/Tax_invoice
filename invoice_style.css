@@ -1,0 +1,349 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+  position: relative;
+  width: 21cm;  
+  height: 29.7cm; 
+  margin: 0 auto; 
+  color: #555555;
+  background: #B3FF8E; 
+  font-family: Arial;
+  font-size: 14px;
+	
+  
+}
+
+header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid red;
+}
+#logo {
+  float: center;
+  margin-top: 8px;
+}
+
+#logo img {
+  height: 120px;
+width: 21cm;
+}
+
+#details {
+  margin-bottom: 10px;
+}
+
+#grouping {
+    padding-left: 6px;
+    float: left;
+    padding-bottom: 10px;
+    
+}
+
+#grouping .to {
+  color: red;
+	
+}
+
+.all_total{
+	width: 100px;
+}
+
+.customer_data {
+    padding: 2px 5px;
+    margin: 8px 0;
+	float: left;
+    
+    
+}
+.customer_details {
+    width: 380px;
+    padding: 2px 5px;	
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+	float: right;
+    border-bottom: 1px dotted  #939393;
+    background-color: #B3FF8E;
+    
+}
+
+h2.name {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#invoice {
+    text-align: right;
+	
+}
+
+#invoice h1 {
+  color: green;
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: normal;
+  margin: 0  0 10px 0;
+}
+
+#invoice .date {
+  font-size: 1.1em;
+  color: #000000;
+}
+.invoice_data {
+	width: 120px;margin: 3px 0;
+}
+
+
+    
+			/* ------------------- Adjust table ------------------------ */ 
+table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+th, td {
+  padding: 2px;
+  text-align: center;
+  border: 1px solid #D800B8 ;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+th:nth-child(1) {
+  width: 5%;
+}
+
+th:nth-child(2) {
+  width: 30%;
+}
+
+th:nth-child(3) {
+  width: 10%;
+}
+
+th:nth-child(4) {
+  width: 10%;
+}
+
+th:nth-child(5) {
+  width: 15%;
+}
+
+th:nth-child(6) {
+  width: 10%;
+}
+
+th:nth-child(7) {
+  width: 15%;
+}
+
+td:nth-child(1) input {
+  width: 100%;
+  box-sizing: border-box;
+	text-align: right;
+}
+
+td:nth-child(2) input {
+  width: 100%;
+  box-sizing: border-box;
+	
+}
+
+td:nth-child(3) input {
+  width: 100%;
+  box-sizing: border-box;
+	
+}
+
+td:nth-child(4) input {
+  width: 100%;
+  box-sizing: border-box;
+	text-align: right;
+	
+}
+
+td:nth-child(5) input {
+  width: 100%;
+  box-sizing: border-box;
+	text-align: right;
+}
+
+td:nth-child(6) input {
+  width: 100%;
+  box-sizing: border-box;
+	text-align: right;
+}
+
+td:nth-child(7) input {
+  width: 100%;
+  box-sizing: border-box;
+	text-align: right;
+}
+
+		/*   --------------------- add, delete & print button -----------------------  */
+.add_row {
+	background: linear-gradient(#00ADEE 5%, #0078A5 100%);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border-color: #0076A3;
+	border-radius: 0.5em;
+	color: white;
+	
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.add_row:hover {
+    background: #00ADEE;
+}
+
+.delete-row {
+	border: none;
+    background: rgb(255, 68, 68);
+    color: white;
+}
+.delete-row:hover {
+    background: rgb(194, 50, 50);
+    color: white;
+}
+
+.print{
+        border: none;
+        cursor: pointer;
+        background-color: inherit;
+        transition: transform .2s ease-in-out;
+        margin-left:10px;
+
+      }
+      .print:hover{
+        transform: rotate(20deg);
+		  color: white;
+
+      }
+      img{
+        width: 50px;
+        height: 50px;
+      }
+
+
+ 
+
+.invoice-summary {    /* ---------------------------------- */
+			
+	justify-content: space-between; 
+	align-items: center;
+	margin-top: 25px;
+	border-top: 2px solid #333;
+	padding: 20px 0;
+	
+}
+.invoice-summary div{
+	margin-bottom: 3px;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;	
+}
+
+/*
+.word{
+	align-items: center;
+	padding-left: 6px;
+  float: left;
+}*/
+
+/* Add styles for the amount in words */
+#word {
+  margin-top: 30px;
+}
+
+#word p {
+  font-weight: bold;
+}
+
+#net-amount-words {
+  color: red;
+}
+
+/* ----------------------------------------------------------------- */
+footer {
+	justify-content: space-between;
+	margin-top: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
+	align-items: center;
+    text-align: center;
+	font-weight: 100;
+    border-top: 1px solid #aaa;
+    
+}
+.notices {
+    padding-left: 6px;
+    border-left: 6px solid #0d6efd;
+    background: #e7f2ff;
+    padding: 10px;
+}
+
+.thanks {
+    margin-top: -100px;
+    font-size: 2em;
+    margin-bottom: 50px
+}
+.for{
+	margin-top: -25px;
+	margin-right: 50px;
+	float: right;
+	text-transform: uppercase;
+}
+
+.signature h5 {
+	font-weight: 100;
+	margin: -20px 0 0;
+	margin-right: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+    border: none;
+	border-top: 1px  dotted #939393 ;
+	float: right;
+	
+	
+}
+/* ----------------------------------------------------------------- */
+
+
+@media print {
+	body {
+		margin: 0;
+	}
+	table {
+		font-size: 16px;
+	}
+	button {
+		display: none;
+	}
+@page {
+		size: A4;
+		margin: 10;
+	}
+	.delete_button{
+		display: none;
+	}
+	.hide{
+		border: 0px;
+	}
+	.all_total{
+		border-top: 0px;
+		border-left: 0px;
+		border-right: 0px;
+		border-bottom: 1px solid #939393;
+		text-align: center;
+	}
+	.invoice_data{
+		border: 0px;
+	}
+
+	
+}

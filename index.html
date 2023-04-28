@@ -1,0 +1,133 @@
+<!doctype html>
+<html><head>
+	<script type="text/javascript" src="javascript.js"></script>	
+<meta charset="utf-8">
+	<link rel="stylesheet" href="invoice_style.css">
+<title>Tax Invoice</title>
+</head>
+
+<body>
+	<header class="clearfix">
+		<div id="logo">
+			<img src="logo.jpg" alt="">
+		</div>
+
+	</header>
+	<main>
+		<div id="details" class="clearfix">
+			<div id="grouping">
+			  
+				  <fieldset>
+					  
+					<legend><i>INVOICE TO :</i></legend>
+					
+						<label class="customer_data"><b>Name :</b></label>
+					  <input class="customer_details" type="text" placeholder="Enter coustomer's name"><br>
+					
+					  	<label class="customer_data"><b>Address :</b></label>
+						<input class="customer_details" type="text" placeholder="ie. Vill,PO,Dist,PIN "><br>
+					
+						<label class="customer_data"><b>Mobile :</b></label>
+						<input class="customer_details" type="text" placeholder="8512XXXXXX"><br>
+					
+						<label class="customer_data"><b>GSTIN :</b></label>
+						<input class="customer_details" type="text" placeholder="GST123456789"><br>
+				  </fieldset>
+			 
+				
+			</div>
+			<div id="invoice">
+				<fieldset>
+					<legend><i>INVOICE DETAILS:</i></legend>
+				
+			  <h1>INVOICE <span contenteditable>3-2-1</span></h1>
+			  		<div class="date">Vecicle No:<input class="invoice_data" type="text" placeholder="WB34A0000"></div>
+					<div class="date">invoice date:<input class="invoice_data" type="date" value="dd/mm/yyyy"></div>
+					<div class="date">Date of supply:<input class="invoice_data" type="date" value="dd/mm/yyyy"></div>
+					<div class="date">Place of supply:<input class="invoice_data" type="text"></div>			
+				</fieldset>	
+			</div>
+		 </div>
+	
+	
+	<!--   List view start  -->
+		<div class="invoice-container">
+			<table>
+				<thead>
+					<tr>
+					  <th style="width: 5%">Sl.No</th>
+					  <th style="width: 30%">Description</th>
+					  <th style="width: 10%">Code</th>
+					  <th style="width: 10%">Quantity</th>
+					  <th style="width: 15%">Unit Price</th>
+					  <th style="width: 10%">Discount(%)</th>
+					  <th style="width: 15%">Amount</th>
+					</tr>
+				</thead>
+				<tbody id="invoice-items">
+					<tr>
+					  <td><input class="hide" type="number" name="sl_no" min="01" value="1"></td>
+					  <td><input class="hide" type="text" name="item-name"></td>
+					  <td><input class="hide" type="text" name="code" placeholder="XXXX"></td>
+					  <td><input class="hide" type="number" name="quantity" min="1" value="1"></td>
+					  <td><input class="hide" type="number" name="price" min="0"></td>
+					  <td><input class="hide" type="number" name="discount" min="0" value="0"></td>
+					  <td><input class="hide" type="number" name="total" readonly></td>
+					  <td class="delete_button"><button class="delete-row">X</button></td>
+					</tr>
+				</tbody>
+				
+			</table>
+			<button class="add_row" id="add-row">Add Item</button>
+		</div>
+			<!--   List view end  -->
+		
+		
+<div class="invoice-summary">
+	<div>
+	  <label for="gross-total">Gross Total:</label>
+	  <input class="all_total" type="number" id="gross-total" readonly>
+	</div><div>
+	  <label for="sgst">SGST:</label>
+	  <input class="all_total" type="number" id="sgst" readonly>
+	 </div><div>
+	  <label for="cgst">CGST:</label>
+	  <input class="all_total" type="number" id="cgst" readonly>
+	  </div><div>
+	  <label for="total-gst">Total GST:</label>
+	  <input class="all_total" type="number" id="total-gst" readonly>
+	  </div><div>
+	  <label for="net-amount">Net Amount:</label>
+	  <input class="all_total" type="number" id="net_amount" readonly>
+	
+	</div>
+	
+  					
+</div>
+		<div class="for" ><h4>For: MAA ENTERPRISE</h4></div>
+		<div id="word">
+  			<!--<p>Amount in words: <span id="unit-price-words"></span></p>  -->
+			
+		
+		</div>
+
+	</main>
+	
+	<div class="thanks">Thank you!</div>
+		<div class="notices">
+			<div>NOTICE:</div>
+			<div class="notice">Good Once Sold not be take back.<br> Certified that the Particlures given above are true and currect.</div>
+		</div>
+	<div class="signature">
+		<h5>Authorised Signature with Seal</h5>
+	</div>
+	
+	<footer>Invoice was created on a computer and is invalid without the signature and seal.</footer>
+	
+	<div id="print">
+		  <button class="print" onclick="printPDF()">
+			  <img src="printing.png" alt="buttonpng" border="0" />
+		  </button>
+	</div>
+	</body>
+</html>
