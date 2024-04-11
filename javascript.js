@@ -100,9 +100,11 @@ function printPDF() {
 	window.print();
 }
 
-
-
-
 //--------------------------------------------------------------------------------------- 
+
+window.addEventListener('beforeunload', function (e){
+	var message ='Are you want to leave?';
+	e.returnValue = message;
+});
 
 
